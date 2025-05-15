@@ -6,7 +6,7 @@ specific amount you request. In programming, we achieve this via method
 overloading: multiple methods with the same name but different signatures.
 */
 
-public class ManualCar {
+class ManualCar {
     private String brand;
     private String model;
     private boolean isEngineOn;
