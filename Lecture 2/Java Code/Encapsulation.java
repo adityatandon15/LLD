@@ -1,4 +1,3 @@
-
 /*
 Encapsulation says 2 things:
 1. An Object's Characteristics and its behaviour are encapsulated together
@@ -13,13 +12,14 @@ encapsulating it together.
 2. We introduce access modifiers (public, private, protected, default) etc to provide data
 security to the class members.
 */
+
 class SportsCar {
     private String brand;
     private String model;
     private boolean isEngineOn = false;
     private int currentSpeed = 0;
     private int currentGear = 0;
-        
+
     //Introduce new variable to exaplain setters
     private String tyreCompany;
 
@@ -58,7 +58,7 @@ class SportsCar {
         currentSpeed += 20;
         System.out.println(brand + " " + model + " : Accelerating to " + currentSpeed + " km/h");
     }
-    
+
     public void brake() {
         currentSpeed -= 20;
         if (currentSpeed < 0) currentSpeed = 0;
@@ -73,10 +73,8 @@ class SportsCar {
     }
 }
 
-//Main Method
 public class Encapsulation {
     public static void main(String[] args) {
-
         SportsCar mySportsCar = new SportsCar("Ford", "Mustang");
 
         mySportsCar.startEngine();
@@ -86,11 +84,6 @@ public class Encapsulation {
         mySportsCar.accelerate();
         mySportsCar.brake();
         mySportsCar.stopEngine();
-
-        //Setting arbitrary value to speed.
-        //mySportsCar.currentSpeed = 500;
-
-       // System.out.println("Current Speed of My Sports Car is set to " + mySportsCar.currentSpeed);
 
        System.out.println("Current Speed of My Sports Car is " + mySportsCar.getSpeed());
     }

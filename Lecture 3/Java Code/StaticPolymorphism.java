@@ -5,8 +5,7 @@ For example, a Manual car can accelerate by a fixed amount or by a
 specific amount you request. In programming, we achieve this via method
 overloading: multiple methods with the same name but different signatures.
 */
-
-public class ManualCar {
+class ManualCar {
     private String brand;
     private String model;
     private boolean isEngineOn;
@@ -32,7 +31,7 @@ public class ManualCar {
         System.out.println(brand + " " + model + " : Engine turned off.");
     }
 
-    // Overloading accelerate - Static Polymorphism
+    /* Overloading accelerate - Static Polymorphism */
     public void accelerate() {
         if (!isEngineOn) {
             System.out.println(brand + " " + model + " : Cannot accelerate! Engine is off.");
@@ -70,8 +69,8 @@ public class StaticPolymorphism {
     public static void main(String[] args) {
         ManualCar myManualCar = new ManualCar("Suzuki", "WagonR");
         myManualCar.startEngine();
-        myManualCar.accelerate();      
-        myManualCar.accelerate(40);    
+        myManualCar.accelerate();
+        myManualCar.accelerate(40);
         myManualCar.brake();
         myManualCar.stopEngine();
     }

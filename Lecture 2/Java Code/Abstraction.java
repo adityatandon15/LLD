@@ -12,6 +12,7 @@ pedals/buttons/stearing wheel etc. You dont need to know how these things work, 
 also they are hidden under thre hood.
 This Interface 'Car' denotes that (pedals/buttons/stearing wheel etc). 
 */
+
 interface Car {
     void startEngine(); 
     void shiftGear(int gear);
@@ -33,6 +34,7 @@ Hence we can concude, to denote a real world car in programming we created 2 cla
 One to deonte all the user-interface like pedals, buttons, stearing wheels etc ('Car' interface).
 And another one to denote the actual car with all the implementations of these buttons (SportsCar' class).
  */
+
 class SportsCar implements Car {
     String brand;
     String model;
@@ -87,10 +89,8 @@ class SportsCar implements Car {
     }
 }
 
-//Main Method
 public class Abstraction {
     public static void main(String[] args) {
-
         Car myCar = new SportsCar("Ford", "Mustang");
 
         myCar.startEngine();
@@ -100,6 +100,5 @@ public class Abstraction {
         myCar.accelerate();
         myCar.brake();
         myCar.stopEngine();
-
     }
 }
