@@ -28,7 +28,7 @@ class Car {
         this.currentSpeed = 0;
     }
 
-    // Common methods for all cars
+    /* Common methods for all cars */
     public void startEngine() {
         isEngineOn = true;
         System.out.println(brand + " " + model + " : Engine started.");
@@ -56,16 +56,16 @@ class Car {
     }
 }
 
-class ManualCar extends Car {  // Inherits from Car
+class ManualCar extends Car {  /* Inherits from Car */
     
-    private int currentGear; //spcific to Manual Car.
+    private int currentGear; /* spcific to Manual Car */
 
     public ManualCar(String brand, String model) {
         super(brand, model);
         this.currentGear = 0;
     }
 
-    // Specialized method for Manual Car
+    /* Specialized method for Manual Car */
     public void shiftGear(int gear) {
         this.currentGear = gear;
         System.out.println(brand + " " + model + " : Shifted to gear " + currentGear);
@@ -73,28 +73,27 @@ class ManualCar extends Car {  // Inherits from Car
 }
 
 
-class ElectricCar extends Car {  // Inherits from Car
+class ElectricCar extends Car {  /* Inherits from Car */
     
-    private int batteryLevel; //spcific to Electric Car.
+    private int batteryLevel; /* spcific to Electric Car. */
 
     public ElectricCar(String brand, String model) {
         super(brand, model);
         this.batteryLevel = 100;
     }
 
-    // Specialized method for Electric Car
+    /* Specialized method for Electric Car */
     public void chargeBattery() {
         batteryLevel = 100;
         System.out.println(brand + " " + model + " : Battery fully charged!");
     }
 }
 
-// Main Class
 public class Inheritance {
     public static void main(String[] args) {
         ManualCar myManualCar = new ManualCar("Suzuki", "WagonR");
         myManualCar.startEngine();
-        myManualCar.shiftGear(1); // Specific to Manual Car
+        myManualCar.shiftGear(1); /* Specific to Manual Car */
         myManualCar.accelerate();
         myManualCar.brake();
         myManualCar.stopEngine();
@@ -102,7 +101,7 @@ public class Inheritance {
         System.out.println("----------------------");
 
         ElectricCar myElectricCar = new ElectricCar("Tesla", "Model S");
-        myElectricCar.chargeBattery(); // Specific to Electric Car
+        myElectricCar.chargeBattery(); /* Specific to Electric Car */
         myElectricCar.startEngine();
         myElectricCar.accelerate();
         myElectricCar.brake();

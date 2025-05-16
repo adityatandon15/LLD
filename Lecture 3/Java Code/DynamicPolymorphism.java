@@ -22,7 +22,7 @@ abstract class Car {
         this.currentSpeed = 0;
     }
 
-    // Common methods for all cars.
+    /* Common methods for all cars. */
     public void startEngine() {
         isEngineOn = true;
         System.out.println(brand + " " + model + " : Engine started.");
@@ -34,7 +34,7 @@ abstract class Car {
         System.out.println(brand + " " + model + " : Engine turned off.");
     }
 
-    // Abstract methods for dynamic polymorphism
+    /* Abstract methods for dynamic polymorphism */
     public abstract void accelerate();
     public abstract void brake();
 }
@@ -47,13 +47,13 @@ class ManualCar extends Car {
         this.currentGear = 0;
     }
 
-    // Specialized method for Manual Car
+    /* Specialized method for Manual Car */
     public void shiftGear(int gear) {
         currentGear = gear;
         System.out.println(brand + " " + model + " : Shifted to gear " + currentGear);
     }
 
-    // Overriding accelerate - Dynamic Polymorphism
+    /* Overriding accelerate - Dynamic Polymorphism */
     @Override
     public void accelerate() {
         if (!isEngineOn) {
@@ -64,7 +64,7 @@ class ManualCar extends Car {
         System.out.println(brand + " " + model + " : Accelerating to " + currentSpeed + " km/h");
     }
 
-    // Overriding brake - Dynamic Polymorphism
+    /* Overriding brake - Dynamic Polymorphism */
     @Override
     public void brake() {
         currentSpeed -= 20;
@@ -81,13 +81,13 @@ class ElectricCar extends Car {
         this.batteryLevel = 100;
     }
 
-    // Specialized method for Electric Car
+    /* Specialized method for Electric Car */
     public void chargeBattery() {
         batteryLevel = 100;
         System.out.println(brand + " " + model + " : Battery fully charged!");
     }
 
-    // Overriding accelerate - Dynamic Polymorphism
+    /* Overriding accelerate - Dynamic Polymorphism */
     @Override
     public void accelerate() {
         if (!isEngineOn) {
@@ -104,7 +104,7 @@ class ElectricCar extends Car {
                            + " km/h. Battery at " + batteryLevel + "%.");
     }
 
-    // Overriding brake - Dynamic Polymorphism
+    /* Overriding brake - Dynamic Polymorphism */
     @Override
     public void brake() {
         currentSpeed -= 15;

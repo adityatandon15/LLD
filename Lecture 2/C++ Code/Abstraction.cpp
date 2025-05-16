@@ -92,7 +92,6 @@ public:
     }
 };
 
-// Main Method
 int main() {
 
     Car* myCar = new SportsCar("Ford", "Mustang");
