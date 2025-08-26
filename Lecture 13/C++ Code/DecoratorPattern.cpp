@@ -26,7 +26,9 @@ public:
     CharacterDecorator(Character* c){
         this->character = c;
     }
-
+    virtual ~CharacterDecorator(){
+        delete character; // cleans up resources 
+    };
 };
 
 // Concrete Decorator: Height-Increasing Power-Up.
@@ -57,10 +59,6 @@ public:
     
     string getAbilities() const override {
         return character->getAbilities() + " with Star Power (Limited Time)";
-    }
-    
-    ~StarPowerUp() {
-        cout << "Destroying StarPowerUp Decorator" << endl;
     }
 };
 
