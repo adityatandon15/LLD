@@ -27,6 +27,7 @@ public:
         else {
             auto pickupOrder = new PickupOrder();
             pickupOrder->setRestaurantAddress(restaurant->getLocation());
+            order = pickupOrder;
         }
         order->setUser(user);
         order->setRestaurant(restaurant);
