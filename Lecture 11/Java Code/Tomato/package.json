@@ -1,0 +1,12 @@
+{
+  "name": "tomato-app",
+  "version": "1.0.0",
+  "description": "Online Food Ordering System",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
