@@ -2,6 +2,8 @@
 #include<iostream>
 #include "../models/Playlist.hpp"
 #include "PlayStrategy.hpp"
+#include <queue>
+#include <stack>
 
 class CustomQueueStrategy : public PlayStrategy {
 private:
