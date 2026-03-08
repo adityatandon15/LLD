@@ -102,11 +102,12 @@ class DBStorage implements Persistence {
 class DocumentEditor {
     private Document document;
     private Persistence storage;
-    private String renderedDocument = "";
+    private String renderedDocument;
 
     public DocumentEditor(Document document, Persistence storage) {
         this.document = document;
         this.storage = storage;
+        this.renderedDocument = "";
     }
 
     public void addText(String text) {
