@@ -1,5 +1,5 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedHashSet; //Order of insertion preserved unlike HashSet
+import java.util.Set;           //O(1) insertion, and deletetion 
 
 interface ISubscriber {
     void update();
@@ -14,24 +14,24 @@ interface IChannel {
 
 // Concrete Subject: a YouTube channel that observers can subscribe to
 class Channel implements IChannel {
-    private List<ISubscriber> subscribers;
+    private Set<ISubscriber> subscribers;
     private String name;
     private String latestVideo;
 
     public Channel(String name) {
         this.name = name;
-        this.subscribers = new ArrayList<>();
+        this.subscribers = new LinkedHashSet<>();
     }
 
     @Override
     public void subscribe(ISubscriber subscriber) {
-        if (!subscribers.contains(subscriber)) {
-            subscribers.add(subscriber);
-        }
+        //The Set handles duplicates automatically in O(1) time
+        subscribers.add(subscriber);
     }
 
     @Override
     public void unsubscribe(ISubscriber subscriber) {
+        // 3. Removal is now O(1) instead of O(N)
         subscribers.remove(subscriber);
     }
 
