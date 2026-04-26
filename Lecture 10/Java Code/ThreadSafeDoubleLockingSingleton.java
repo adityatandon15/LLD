@@ -1,6 +1,6 @@
 public class ThreadSafeDoubleLockingSingleton {
-    private static ThreadSafeDoubleLockingSingleton instance = null;
-
+    private static volatile ThreadSafeDoubleLockingSingleton instance = null; //volatile variable meaning it will me same across all threads or program will point to main memory 
+                                                                                //volatile is used in thread-safe environments 
     private ThreadSafeDoubleLockingSingleton() {
         System.out.println("Singleton Constructor Called!");
     }

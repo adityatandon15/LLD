@@ -4,9 +4,9 @@ interface Iterator<T> {
     boolean hasNext();
     T next();
 }
-
+//Iterable (has-a) ->  Iterator
 interface Iterable<T> {
-    Iterator<T> getIterator();
+    Iterator<T> getIterator();   //singeton+Iterator pattern, here Iterable returns object of another Iterator class
 }
 
 // Linked List
@@ -14,7 +14,7 @@ class LinkedList implements Iterable<Integer> {
     public int data;
     public LinkedList next;
 
-    public LinkedList(int value) {
+    public LinkedList(int value) {  //java auto-boxes int to Integer when implementing Iterable<T> T is Integer here 
         data = value;
         next = null;
     }
