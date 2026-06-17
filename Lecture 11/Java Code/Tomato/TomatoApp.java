@@ -6,6 +6,8 @@ import strategies.*;
 import factories.*;
 import services.NotificationService;
 
+// This is an Orchestrator class in which we will manage and play with all the TomatoApp entities
+
 public class TomatoApp {
 
     public TomatoApp() {
