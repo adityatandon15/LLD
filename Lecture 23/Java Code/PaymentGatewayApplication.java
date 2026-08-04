@@ -33,7 +33,7 @@ class PaytmBankingSystem implements BankingSystem {
     public boolean processPayment(double amount) {
         // Simulate 20% success
         int r = rand.nextInt(100);
-        return r < 80;
+        return r < 20;
     }
 }
 
