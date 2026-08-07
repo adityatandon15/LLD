@@ -1,6 +1,8 @@
 import models.*;
 import strategies.*;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         // Simulating a happy flow
@@ -12,7 +14,7 @@ public class Main {
         System.out.println("User: " + user.getName() + " is active.");
 
         // User searches for restaurants by location
-        java.util.List<Restaurant> restaurantList = tomato.searchRestaurants("Delhi");
+        List<Restaurant> restaurantList = tomato.searchRestaurants("Delhi");
 
         if (restaurantList.isEmpty()) {
             System.out.println("No restaurants found!");
